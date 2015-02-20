@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+    <head>
+        <title>Sign Up</title>
+        
+        <link href="css/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/basicStyle.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
+    </head>
+    
+    <body class="signupBodyStyle">
+        <br><br><br><br>
+        <form name="myForm" id="myForm">
+        <table align="center">
+            <tr>
+                <td><label for="FirstNameLabel" class="tableproperties">First Name</label></td>
+                <td><input type="text" class="signupTextBoxStyle" name="firstname" placeholder="Enter First Name" id="FirstNameBox" required=""></td>
+            </tr>
+            
+            <tr>
+                <td><label for="LastNameLabel" class="tableproperties">Last Name</label></td>
+                <td><input type="text" name="lastname" placeholder="Enter Last Name" id="LastNameBox" class="signupTextBoxStyle" required></td>
+            </tr>
+            
+            <tr>
+                <td><label for="eMailLabel" class="tableproperties">Email</label></td>
+                <td><input type="email" name="email" placeholder="Enter Email" id="eMailBox" class="signupTextBoxStyle" required></td>
+                <td id="emailStatus"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="passwordLabel" class="tableproperties">Password</label></td>
+                <td><input type="password" name="password" placeholder="Enter Password" id="passwordTextbox" maxlength="24" class="signupTextBoxStyle" required></td>
+                <td><i class="fa fa-info-circle infoIcon" title="Password must contain minimum 3 upper case, 2 lower case and 2 special chars"></i></td>
+                <td><progress value="0" max="100" class="progressBar" id="progressStatus"></progress></td>
+                <td id="passwordStrength"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="confirmPasswordLabel" class="tableproperties">Confirm Password</label></td>
+                <td><input type="password" name="password" placeholder="Must be same as password" maxlength="24" id="confirmPasswordBox" class="signupTextBoxStyle" required></td>
+                <td id="passwordMismatch"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="dobLabel" class="tableproperties">D.O.B</label></td>
+                <td><input type="date" name="password" placeholder="Enter D.O.B" id="dobBox" class="signupTextBoxStyle" required></td>
+            </tr>
+            
+            <tr>
+                <td><label for="dobTimeLabel" class="tableproperties">D.O.B with time</label></td>
+                <td><input type="datetime" name="password" placeholder="Enter D.O.B with time" id="dobTimeBox" class="signupTextBoxStyle" required></td>
+            </tr>
+            
+            <tr>
+                <td><label for="localDOBLabel" class="tableproperties">Local D.O.B</label></td>
+                <td><input type="datetime-local" name="password" placeholder="Enter Local D.O.B" id="localDobBox" class="signupTextBoxStyle" required></td>
+            </tr>
+            
+            <tr>
+                <td><label for="ssnLabel" class="tableproperties">SSN</label></td>
+                <td><input type="text" name="password" placeholder="000-00-0000" id="ssnBox" pattern="^(\d{3}-\d{2}-\d{4})$" class="signupTextBoxStyle" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="usPhoneNumber" class="tableproperties" >US Phone Number</label></td>
+                <td><input type="text" name="phone" placeholder="000-000-0000" id="usNumberBox" class="signupTextBoxStyle" required></td>
+                <td id="phoneStatus"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="creditLabel" class="tableproperties" id="CreditText">Credit Card Number</label></td>
+                <td><input type="text" name="creditCardNumber" placeholder="Enter Credit Card Number" pattern="^[0-9]{12}(?:[0-9]{4})?$" id="creditBox" class="signupTextBoxStyle" required></td>
+            </tr>
+            
+            <tr>
+                <td colspan='2'>
+                    <button type="button" onclick=" return submitDetails()" class="btn btn-primary btn-lg btn-block signupbuttonStyle" id="createACC">Create Account</button>
+                    <button type="button" class="btn btn-danger btn-lg btn-block signupbuttonStyle" onclick="location.href = 'index.html';">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </body>
+        <script src="js/jquery.min.js"></script>
+        <script src="css/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/library.js"></script>
+</html>
